@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TinkoffMovies</string>
+    <string name="genres">Жанры: %s</string>
+    <string name="countries">Страны: %s</string>
+    <string name="something_went_wrong">Что-то пошло не так, попробуйте обновить</string>
+    <string name="favorites">Избранное</string>
+    <string name="popular">Популярные</string>
+    <string name="token_exception_text">Что-то с api-key. Дайте по голове разработчику и поробуйте ещё раз!</string>
+    <string name="too_manu_daily_requests">Ну ты натыкал! Хорош, давай уже завтра!</string>
+    <string name="film_not_found">Такой фильм не найден. Давай поищем другой?</string>
+    <string name="ddos_exception">Нас дудосят, попробуй позже!</string>
+</resources>
