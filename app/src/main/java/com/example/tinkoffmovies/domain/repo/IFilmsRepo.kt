@@ -9,7 +9,7 @@ interface IFilmsRepo {
 
     suspend fun getFilmDetails(id: Int): FilmDetailsModel
 
-    fun updateFavorite(id: Int)
+    suspend fun updateFavorite(id: Int)
 
     fun cleanDetailsCache()
 

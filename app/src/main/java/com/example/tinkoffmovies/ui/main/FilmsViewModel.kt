@@ -16,7 +16,8 @@ import javax.inject.Inject
 
 // Костыль. Вообще нужно было делать interactor и такое делать в нём.
 // Но сразу в нём пользы не увидел (кроме как тестами обмазать), а теперь лень.
-private const val INTERNET_EXCEPTION_TEXT = "Интернет накрылся. Проверьте настройки или смените провайдера и попробйте вновь."
+private const val INTERNET_EXCEPTION_TEXT =
+    "Интернет накрылся. Проверьте настройки или смените провайдера и попробйте вновь."
 
 @HiltViewModel
 class FilmsViewModel @Inject constructor(
@@ -76,8 +77,10 @@ class FilmsViewModel @Inject constructor(
     }
 
     fun addToFavorite(id: Int) {
-        repo.updateFavorite(id)
-        getFilms()
+        viewModelScope.launch {
+            repo.updateFavorite(id)
+            getFilms()
+        }
     }
 
     fun switchFavoriteScreen(isFavorite: Boolean) {

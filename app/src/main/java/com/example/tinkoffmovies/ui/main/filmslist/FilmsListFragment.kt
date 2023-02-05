@@ -73,6 +73,7 @@ class FilmsListFragment : Fragment() {
                 if (lastVisibleItemPosition >= totalItemCount - 3
                     && lastVisibleItemPosition >= 0 && totalItemCount >= PAGE_SIZE
                     && dy > 0
+                    && binding.filterFavoriteChips.checkedChipId == R.id.popular_chip
                 ) {
                     viewModel.loadNextFilms()
                 }
